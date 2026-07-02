@@ -1,8 +1,9 @@
 FROM vaultwarden/server:1.36.0
 
 # Configure vaultwarden to listen on 8080 (Railway's expected port)
-ENV PORT=8080
 ENV LISTEN_ADDRESS=0.0.0.0
+ENV ROCKET_PORT=8080
+ENV PORT=8080
 
 EXPOSE 8080
 
