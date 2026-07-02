@@ -1,6 +1,6 @@
 # Deploy and Host vaultwarden on Railway
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/vaultwarden)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/s1i6p9)
 
 Vaultwarden is an alternative, open-source implementation of Bitwarden's server API — a self-hosted password manager compatible with all official Bitwarden clients. One-click deploy on Railway, no separate database needed (SQLite).
 
