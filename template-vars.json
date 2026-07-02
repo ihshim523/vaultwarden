@@ -1,0 +1,47 @@
+{
+  "PORT": {
+    "defaultValue": "8080",
+    "description": "Port Vaultwarden listens on",
+    "isOptional": false
+  },
+  "LISTEN_ADDRESS": {
+    "defaultValue": "0.0.0.0",
+    "description": "Bind address (0.0.0.0 to listen on all interfaces)",
+    "isOptional": true
+  },
+  "DATA_FOLDER": {
+    "defaultValue": "data",
+    "description": "Folder for database and data files",
+    "isOptional": false
+  },
+  "DB_URL": {
+    "defaultValue": "",
+    "description": "Database connection string. Leave empty to use SQLite.",
+    "isOptional": true
+  },
+  "HIBP_API_KEY": {
+    "defaultValue": "",
+    "description": "Have I Been Pwned API key for breach checking. Optional — leave empty to skip checks.",
+    "isOptional": true
+  },
+  "ADMIN_TOKEN": {
+    "defaultValue": "${{secret(32)}}",
+    "description": "Token to access the admin panel at /admin. Generate with a secret generator.",
+    "isOptional": false
+  },
+  "ADMIN_ENABLED": {
+    "defaultValue": "false",
+    "description": "Enable admin panel UI (set to true to enable)",
+    "isOptional": true
+  },
+  "SIGNUPS_VERIFY": {
+    "defaultValue": "false",
+    "description": "Require email verification on signup. Default is false for one-click deployment.",
+    "isOptional": true
+  },
+  "IP_HEADER_OPTIONAL": {
+    "defaultValue": "false",
+    "description": "Show or hide user IP in sessions (true/false)",
+    "isOptional": true
+  }
+}
