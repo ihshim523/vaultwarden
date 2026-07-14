@@ -1,38 +1,38 @@
 {
   "PORT": {
     "value": "8080",
-    "description": "Port Vaultwarden listens on"
+    "description": "Port Vaultwarden listens on (Railway-injected, keep at 8080)"
   },
-  "LISTEN_ADDRESS": {
+  "ROCKET_ADDRESS": {
     "value": "0.0.0.0",
-    "description": "Bind address (0.0.0.0 to listen on all interfaces)"
+    "description": "Bind address for the web server (0.0.0.0 = all interfaces)"
   },
   "DATA_FOLDER": {
-    "value": "data",
-    "description": "Folder for database and data files"
+    "value": "/data",
+    "description": "Folder for the database and data files. Must match the volume mount path (/data) so data persists."
   },
-  "DB_URL": {
+  "DATABASE_URL": {
     "value": "",
-    "description": "Database connection string. Leave empty to use SQLite."
+    "description": "Database connection string. Leave empty to use the bundled SQLite database."
   },
   "HIBP_API_KEY": {
     "value": "",
-    "description": "Have I Been Pwned API key for breach checking. Optional \u2014 leave empty to skip checks."
+    "description": "Have I Been Pwned API key for breach checking. Optional — leave empty to skip checks."
   },
   "ADMIN_TOKEN": {
     "value": "${{secret(32)}}",
-    "description": "Token to access the admin panel at /admin. Auto-generated."
+    "description": "Token to access the admin panel at /admin. Auto-generated on deploy."
   },
-  "ADMIN_ENABLED": {
+  "DISABLE_ADMIN_TOKEN": {
     "value": "false",
-    "description": "Enable admin panel UI (set to true to enable)"
+    "description": "Set to true to disable the admin panel. Default false = admin panel enabled."
   },
   "SIGNUPS_VERIFY": {
     "value": "false",
-    "description": "Require email verification on signup. Default is false for one-click deployment."
+    "description": "Require email verification on signup. Default false for one-click deployment."
   },
-  "IP_HEADER_OPTIONAL": {
-    "value": "false",
-    "description": "Show or hide user IP in sessions (true/false)"
+  "IP_HEADER": {
+    "value": "",
+    "description": "HTTP header used to determine the client IP (e.g. X-Real-IP). Leave empty to use the connection IP."
   }
 }

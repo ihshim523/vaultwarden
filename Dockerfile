@@ -1,8 +1,9 @@
 FROM vaultwarden/server:1.36.0
 
-# Configure vaultwarden to listen on 8080 (Railway's expected port)
-# and use /data for persistent storage (Railway volume mount)
-ENV LISTEN_ADDRESS=0.0.0.0
+# Configure Vaultwarden to listen on 8080 (Railway's expected port)
+# and use /data for persistent storage (Railway volume mount).
+# Variable names match Vaultwarden's real config (see .env.template).
+ENV ROCKET_ADDRESS=0.0.0.0
 ENV ROCKET_PORT=8080
 ENV PORT=8080
 ENV DATA_FOLDER=/data
